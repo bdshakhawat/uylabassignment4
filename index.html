@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            padding: 0;
+            
+            list-style-type: none;
+            background: #4e4e4e;
+            min-height: 55px;
+            border-top: 5px solid orange;
+            border-bottom: 5px solid orange;
+            margin: 0 auto;
+            width: 950px;
+        }
+        .menu li{
+            float: left;
+            border-left: 1px solid#2e2e2e;
+            border-right: 1px solid #000;
+            position: relative;
+
+
+        }
+        .menu li a{
+            text-decoration: none;
+            background: #4e4e4e;
+            padding: 15px 20px;
+            color: #fff;
+            display: block;
+            font-size: 20px;
+            text-transform: uppercase;
+           
+            
+
+        }
+        .menu li a:hover{
+            background: orange;
+
+        }
+        .menu li:last-child{
+            border-right: 0px;
+        }
+        .menu li:first-child{
+            border-left: 0px;
+        }
+        /* Dropdown menu */
+        .menu li ul {
+            list-style-type: none;
+            padding: 0px;
+            position: absolute;
+            left: -99999px;
+
+        }
+        .menu li ul li {
+            float: none;
+            border-left: none;
+            border-right: none;
+            border-top: 1px solid #2e2e2e;
+            border-bottom:1px solid #000 ;
+            width: 200px;
+            position: relative;
+        }
+        .menu li:hover ul  {
+            left: 0px;
+            
+        }
+        /* subdropdown menu */
+        #sub{
+            
+
+
+        }
+        .menu li ul li ul {
+            position: absolute;
+            top: -99999px;
+            
+
+        }
+        .menu li ul li:hover ul {
+            top: 0px;
+
+            
+        }
+        .menu li ul li ul li{
+            /*In the patent li of subdropdown 200px width is given so, i have to remove the subdropdown li 200px from the left  */
+            left: 200px;
+
+            
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Service</a>
+            <!-- Dropdown menu start -->
+            <ul>
+                <li><a href="">Dropdown1</a></li>
+                <li><a href="">Dropdown2</a></li>
+                <li><a href="">Dropdown3</a></li>
+                <li><a href="">Dropdown4</a>
+                    <!-- subdropdown menu -->
+                    <ul >
+                        <li><a href="">Subdropdown1</a></li>
+                        <li><a href="">Subdropdown2</a></li>
+                        <li><a href="">Subdropdown3</a></li>
+                        <li><a href="">subdropdown4</a></li>
+                        <li><a href="">subdropdown5</a></li>
+                    </ul>
+                
+                
+                </li>
+                <li><a href="">Dropdown5</a></li>
+            </ul>   
+        
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    
+</body>
+</html>
